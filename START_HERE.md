@@ -35,16 +35,41 @@ curl http://localhost:8000/health
 
 **You're not coding alone - you're working with AI!**
 
-### Your AI Tools
-- **Cursor** (with Claude or GPT-4) - For code generation
-- **Claude** or **ChatGPT** - For planning and problem-solving
-- Your Coordinator will specify which to use
+### Choose Your AI Tools (Pick What You Have)
+
+**Option 1: Cursor (Recommended)**
+- All-in-one code editor with AI
+- Works with Claude, GPT-4, or other models
+- Free tier available, Pro recommended ($20/month)
+- **Best for:** Integrated coding + AI in one tool
+
+**Option 2: Gemini (Free Alternative)**
+- **Gemini 2.0 Flash** (free) - Fast, good for code generation
+- **Gemini with Gems** - Like Claude Projects (upload context files)
+- Upload starter-kit docs to a Gem for context
+- **Best for:** Free access, unlimited usage
+
+**Option 3: Claude (Premium)**
+- Claude 3.5 Sonnet - Excellent code understanding
+- Projects feature - Upload entire codebase
+- $20/month subscription
+- **Best for:** Complex reasoning, code review
+
+**Option 4: ChatGPT**
+- GPT-4 or GPT-4o - Strong general coding
+- Free tier (GPT-3.5) or $20/month (GPT-4)
+- **Best for:** Familiar interface, good documentation
+
+**Mix & Match Strategy (Recommended):**
+- **Build:** Use Gemini or Cursor (fast, cheap/free)
+- **Review:** Use free Claude or ChatGPT to verify code quality
+- **Debug:** Ask different AI if stuck (fresh perspective)
 
 ### How to Use AI
 
 **For each mission:**
 1. **Read your `MISSION_SPEC.md`** - It includes pre-written prompts
-2. **Copy prompts into AI** - Use the exact prompts provided
+2. **Copy prompts into your chosen AI** - Use the exact prompts provided
 3. **AI generates code** - Based on UDC template + requirements
 4. **You verify & test** - Run tests, check endpoints
 5. **Iterate** - Ask AI to fix issues, add features
@@ -53,12 +78,30 @@ curl http://localhost:8000/health
 **Example workflow:**
 ```
 You: [Paste Prompt 1 from MISSION_SPEC.md]
-AI: [Generates code for endpoint]
+Gemini/Claude/GPT: [Generates code for endpoint]
 You: pytest tests/  # Verify it works
 You: "Add error handling for invalid input"
 AI: [Updates code]
 You: pytest tests/  # Verify again
 ```
+
+**Pro Tip with Gemini Gems:**
+1. Create a Gem called "Full Potential AI Service Builder"
+2. Upload: `starter-kit/docs/UDC_COMPLIANCE.md`, `SERVICE_STANDARDS.md`, your `MISSION_SPEC.md`
+3. Now Gemini has all context for better answers
+
+**Multi-AI Verification Strategy:**
+```
+Build Phase: Use Gemini (fast, free, unlimited)
+  ↓
+Code Review: Ask free Claude "Review this code for issues"
+  ↓
+Alternative Check: Ask ChatGPT "Does this follow best practices?"
+  ↓
+Final Verify: Run pytest (automated truth)
+```
+
+**Why multiple AIs?** Each has different strengths. Gemini might miss something Claude catches, or vice versa. Free tier of each is usually enough for review.
 
 **Key: The spec includes prompts. Don't start from scratch!**
 
@@ -333,9 +376,22 @@ See HANDOFF.md for details.
 **Required:**
 - Python 3.11+ - [Download](https://www.python.org/downloads/)
 - Git - [Download](https://git-scm.com/)
-- **Cursor** or **Claude** - Your AI coding assistant
-- Code editor (Cursor includes this)
+- **AI Assistant** - Choose one (or mix):
+  - **Gemini** (free) - [gemini.google.com](https://gemini.google.com)
+  - **Cursor** ($20/mo or free tier) - [cursor.sh](https://cursor.sh)
+  - **Claude** ($20/mo) - [claude.ai](https://claude.ai)
+  - **ChatGPT** (free or $20/mo) - [chat.openai.com](https://chat.openai.com)
+- Code editor (VS Code, PyCharm, or Cursor)
 - GitHub account (free)
+
+**Recommended Combo (Free):**
+- **Gemini** for code generation (fast, unlimited)
+- **Free Claude** for code review (limited but powerful)
+- **VS Code** as editor
+
+**Recommended Combo (Premium):**
+- **Cursor** for integrated AI + coding
+- **Claude** for complex problem-solving
 
 **Optional but helpful:**
 - Docker (for local container testing)

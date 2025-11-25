@@ -40,7 +40,9 @@ What your Service must DO:
 
 ## 🤖 Pre-Written AI Prompts
 
-**Apprentice:** Copy these prompts into **Cursor** or **Claude** exactly as written. They're designed to work with the starter-kit template.
+**Apprentice:** Copy these prompts into your chosen AI tool (Cursor, Gemini, Claude, or ChatGPT) exactly as written. They're designed to work with the starter-kit template.
+
+**Tip:** If using Gemini Gems or Claude Projects, upload the starter-kit docs first for better context.
 
 ### Prompt 1: Initial Setup
 
