@@ -5,6 +5,23 @@
 
 ---
 
+## ⏱️ **MISSION TO PRODUCTION: 3-5 HOURS**
+
+**Your work:** 2-3 hours | **Waiting:** 1-2 hours | **LIVE:** Same day
+
+| Hour | Phase | Who | What |
+|------|-------|-----|------|
+| 0-0.5 | Setup | **YOU** | Copy template, install deps ✅ |
+| 0.5-2 | Build | **YOU** | AI generates code from prompts ✅ |
+| 2-2.5 | Submit | **YOU** | Tests, security, push to GitHub ✅ |
+| 2.5-3 | Review | Verifier | Code review & testing ⏳ |
+| 3-3.5 | Deploy | Coordinator | Push to production ⏳ |
+| **3.5** | **LIVE** | - | **Service running!** 🚀 |
+
+**See [`AGGRESSIVE_TIMELINE.md`](AGGRESSIVE_TIMELINE.md) for hour-by-hour breakdown**
+
+---
+
 ## ⚡ FAST PATH (10 Minutes)
 
 **Just want to start building right away?**
