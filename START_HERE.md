@@ -1,369 +1,477 @@
 # 🎯 START HERE - Apprentice Onboarding
 
 > **Welcome to the Full Potential AI Starter Kit!**  
-> This guide will take you from zero to your first deployed Service.
+> This is your **template repository** - you'll copy from here to build your Service.
 
 ---
 
-## 📋 What You're About To Do
+## ⚡ FAST PATH (10 Minutes)
 
-You're going to build a **Service** (an autonomous backend process) that joins the Full Potential AI network. Think of it like creating a specialized worker that can communicate with other workers through a standard protocol.
+**Just want to start building right away?**
 
-**Time Commitment:**
-- **First-time setup:** 15 minutes
-- **Build your Service:** 2-3 hours (depending on complexity)
-- **Testing & submission:** 30 minutes
-
----
-
-## 🎓 Step-by-Step Learning Path
-
-Follow these lessons in order. Each builds on the previous one.
-
-### Phase 1: Understanding (30 minutes)
-
-#### 📖 Lesson 1: Core Concepts (10 min)
-**File:** `lessons/01_CORE_CONCEPTS.md`
-
-What you'll learn:
-- What is a Service (Droplet)?
-- What is UDC (Universal Droplet Contract)?
-- How Services work together
-
-**Action:** Read this first to understand the big picture.
-
----
-
-#### 📖 Lesson 2: The 5 Required Endpoints (15 min)
-**File:** `docs/UDC_COMPLIANCE.md`
-
-What you'll learn:
-- The 5 endpoints every Service must have
-- What each endpoint does and why
-- How to test them
-
-**Action:** This is your "bible" - bookmark it for reference.
-
----
-
-#### 💡 Lesson 3: See a Working Example (5 min)
-**Folder:** `examples/service-simple/`
-
-What you'll learn:
-- How simple a UDC Service can be (~20 lines)
-- What a working Service looks like
-
-**Action:** 
 ```bash
-cd examples/service-simple
+# 1. Copy the template to YOUR new repo
+cp -r templates/python-fastapi ../service-16-yourname
+cd ../service-16-yourname
+git init
+
+# 2. Set up environment
+cp env.example .env
 pip install -r requirements.txt
-uvicorn src.main:app --reload
-# Visit http://localhost:8000/docs
-```
 
----
-
-### Phase 2: Building (2-3 hours)
-
-#### 🔧 Lesson 4: Set Up Your Development Environment (15 min)
-**File:** `lessons/02_SETUP_ENVIRONMENT.md`
-
-What you'll learn:
-- How to copy the template
-- How to configure your environment
-- How to run tests
-
-**Action:** Follow the step-by-step setup guide.
-
----
-
-#### 🏗️ Lesson 5: Customize Your Service (30 min - 2 hours)
-**File:** `lessons/03_BUILD_YOUR_SERVICE.md`
-
-What you'll learn:
-- How to modify the template for your needs
-- Where to add your business logic
-- How to handle messages from other Services
-
-**Action:** This is where you implement your assigned mission.
-
----
-
-#### 📏 Lesson 6: Code Quality & Standards (20 min)
-**File:** `docs/SERVICE_STANDARDS.md`
-
-What you'll learn:
-- Python coding standards we follow
-- How to structure your code
-- Common mistakes to avoid
-
-**Action:** Review this while coding, use as a checklist.
-
----
-
-#### 🔒 Lesson 7: Security Requirements (15 min)
-**File:** `docs/SECURITY_REQUIREMENTS.md`
-
-What you'll learn:
-- What NEVER to put in code
-- How to handle secrets safely
-- Security checklist before submission
-
-**Action:** **CRITICAL** - Read before your first commit!
-
----
-
-### Phase 3: Integration (30 minutes)
-
-#### 🔗 Lesson 8: Service Integration (Optional for first build)
-**File:** `docs/SERVICE_INTEGRATION.md`
-
-What you'll learn:
-- How to call other Services
-- Authentication with JWT
-- Service discovery through Registry
-
-**Action:** Read if your Service needs to talk to other Services.
-
----
-
-### Phase 4: Testing & Submission (30 minutes)
-
-#### ✅ Lesson 9: Testing Your Service (15 min)
-**File:** `lessons/04_TESTING.md`
-
-What you'll learn:
-- How to run automated tests
-- How to manually test each endpoint
-- How to verify UDC compliance
-
-**Action:** Run all tests before submission.
-
----
-
-#### 📦 Lesson 10: Docker & Deployment (10 min)
-**File:** `lessons/05_DOCKER_DEPLOYMENT.md`
-
-What you'll learn:
-- How to build a Docker image
-- How to test the container
-- How to verify it's production-ready
-
-**Action:** Build and test your container locally.
-
----
-
-#### 📤 Lesson 11: Submission (5 min)
-**File:** `lessons/06_SUBMISSION.md`
-
-What you'll learn:
-- How to fill out the handoff template
-- What to include in your submission
-- How to submit to your Coordinator
-
-**Action:** Complete HANDOFF_TEMPLATE.md and submit.
-
----
-
-## 🎯 Quick Navigation by Role
-
-### "I'm brand new to this"
-1. Read `lessons/01_CORE_CONCEPTS.md`
-2. Run `examples/service-simple/`
-3. Follow `docs/GETTING_STARTED.md`
-4. Proceed through lessons 4-11
-
-### "I have FastAPI experience"
-1. Skim `docs/UDC_COMPLIANCE.md` (5 endpoints)
-2. Skim `docs/QUICK_REFERENCE.md` (cheat sheet)
-3. Copy `templates/python-fastapi/`
-4. Jump to lessons 5-11
-
-### "I just need a quick reminder"
-- **Quick Reference:** `docs/QUICK_REFERENCE.md`
-- **All in one page:** Cheat sheet for experienced devs
-
----
-
-## 📁 Folder Structure Overview
-
-```
-starter-kit/
-│
-├── 🚀 START_HERE.md          ← YOU ARE HERE
-│
-├── 📚 lessons/               ← Step-by-step learning path
-│   ├── 01_CORE_CONCEPTS.md
-│   ├── 02_SETUP_ENVIRONMENT.md
-│   ├── 03_BUILD_YOUR_SERVICE.md
-│   ├── 04_TESTING.md
-│   ├── 05_DOCKER_DEPLOYMENT.md
-│   └── 06_SUBMISSION.md
-│
-├── 📖 docs/                  ← Reference documentation
-│   ├── UDC_COMPLIANCE.md     (The "Bible" - 5 endpoints)
-│   ├── SERVICE_STANDARDS.md  (Code quality rules)
-│   ├── TECH_STACK.md        (Approved technologies)
-│   ├── SECURITY_REQUIREMENTS.md (Security rules)
-│   ├── SERVICE_INTEGRATION.md (Multi-service patterns)
-│   ├── GETTING_STARTED.md    (Hands-on tutorial)
-│   └── QUICK_REFERENCE.md    (One-page cheat sheet)
-│
-├── 🔧 templates/             ← Copy this to start building
-│   └── python-fastapi/       (Production-ready template)
-│
-├── 💡 examples/              ← Working examples
-│   └── service-simple/       (Minimal 20-line Service)
-│
-├── 📋 MISSION_TEMPLATE.md    ← Fill this out when assigned
-├── 📋 HANDOFF_TEMPLATE.md    ← Fill this out when done
-├── 🔒 SECURITY.md            ← Public repo security policy
-└── 📄 README.md              ← Overview & philosophy
-```
-
----
-
-## 🎯 Your Mission Assignment
-
-When you receive an assignment from your Coordinator, they'll give you:
-
-1. **Mission Specification** - What to build
-2. **Service ID** - Your unique number
-3. **Credentials** - For Registry and JWT (never commit these!)
-
-**Your workflow:**
-1. Copy `MISSION_TEMPLATE.md` to your service repo
-2. Fill it out with your assignment details
-3. Build your Service following the lessons
-4. Test thoroughly
-5. Fill out `HANDOFF_TEMPLATE.md`
-6. Submit to Coordinator
-
----
-
-## 🛠️ Tools You'll Need
-
-### Required
-- **Python 3.11+** - [Download](https://www.python.org/downloads/)
-- **pip** - Comes with Python
-- **Git** - [Download](https://git-scm.com/)
-- **Code editor** - VS Code, PyCharm, or your favorite
-- **Docker** - [Download](https://www.docker.com/get-started)
-
-### Helpful
-- **Postman or curl** - For testing APIs
-- **Terminal** - Command line access
-
----
-
-## 🆘 Getting Help
-
-### During Learning Phase
-| Question | Where to Look |
-|----------|---------------|
-| "What's a Droplet?" | `lessons/01_CORE_CONCEPTS.md` |
-| "How do I set up?" | `lessons/02_SETUP_ENVIRONMENT.md` |
-| "Where do I add my code?" | `lessons/03_BUILD_YOUR_SERVICE.md` |
-| "How do I test?" | `lessons/04_TESTING.md` |
-
-### During Development
-| Question | Where to Look |
-|----------|---------------|
-| "What libraries can I use?" | `docs/TECH_STACK.md` |
-| "How do I structure code?" | `docs/SERVICE_STANDARDS.md` |
-| "How do I keep secrets safe?" | `docs/SECURITY_REQUIREMENTS.md` |
-| "How do I call other Services?" | `docs/SERVICE_INTEGRATION.md` |
-
-### Quick Answers
-- **One-page cheat sheet:** `docs/QUICK_REFERENCE.md`
-- **All 5 endpoints explained:** `docs/UDC_COMPLIANCE.md`
-
-### Still Stuck?
-Contact your Coordinator with:
-- What you're trying to do
-- What you've tried
-- What error you're getting
-
----
-
-## ✅ Success Checklist
-
-Before you begin, make sure you have:
-- [ ] Python 3.11+ installed (`python --version`)
-- [ ] pip working (`pip --version`)
-- [ ] Docker installed (`docker --version`)
-- [ ] Code editor ready
-- [ ] Access to this starter-kit repository
-
-Before you submit, verify:
-- [ ] All 5 UDC endpoints implemented
-- [ ] `pytest` passes all tests
-- [ ] Docker builds successfully
-- [ ] No secrets in code (checked git history)
-- [ ] `HANDOFF_TEMPLATE.md` filled out
-- [ ] README updated with service-specific info
-
----
-
-## 🚀 Ready to Start?
-
-### Absolute Beginner Path
-```bash
-# Step 1: Read core concepts (10 min)
-open lessons/01_CORE_CONCEPTS.md
-
-# Step 2: See it working (5 min)
-cd examples/service-simple
-pip install -r requirements.txt
-uvicorn src.main:app --reload
-
-# Step 3: Follow setup guide (15 min)
-# Read lessons/02_SETUP_ENVIRONMENT.md and follow along
-
-# Step 4: Build your service (2-3 hours)
-# Read lessons/03_BUILD_YOUR_SERVICE.md and implement
-```
-
-### Experienced Developer Path
-```bash
-# Step 1: Quick overview (5 min)
-open docs/QUICK_REFERENCE.md
-
-# Step 2: Copy template (2 min)
-cp -r templates/python-fastapi ../my-service
-cd ../my-service
-
-# Step 3: Build (1-2 hours)
-# Customize src/main.py with your logic
-
-# Step 4: Test & submit (30 min)
+# 3. Verify it works
 pytest
-docker build -t my-service .
-# Fill out HANDOFF_TEMPLATE.md
+uvicorn src.main:app --reload
+
+# 4. Test the endpoints
+curl http://localhost:8000/health
+```
+
+✅ **You now have a working UDC-compliant service!** Read your `MISSION_SPEC.md` and start customizing.
+
+---
+
+## 🤖 USING AI IN THE ASSEMBLY LINE
+
+**You're not coding alone - you're working with AI!**
+
+### Your AI Tools
+- **Cursor** (with Claude or GPT-4) - For code generation
+- **Claude** or **ChatGPT** - For planning and problem-solving
+- Your Coordinator will specify which to use
+
+### How to Use AI
+
+**For each mission:**
+1. **Read your `MISSION_SPEC.md`** - It includes pre-written prompts
+2. **Copy prompts into AI** - Use the exact prompts provided
+3. **AI generates code** - Based on UDC template + requirements
+4. **You verify & test** - Run tests, check endpoints
+5. **Iterate** - Ask AI to fix issues, add features
+6. **Use AI for handoff** - Generate `HANDOFF.md` sections
+
+**Example workflow:**
+```
+You: [Paste Prompt 1 from MISSION_SPEC.md]
+AI: [Generates code for endpoint]
+You: pytest tests/  # Verify it works
+You: "Add error handling for invalid input"
+AI: [Updates code]
+You: pytest tests/  # Verify again
+```
+
+**Key: The spec includes prompts. Don't start from scratch!**
+
+---
+
+## 📋 COMPLETE BUILD FLOW
+
+### Where You Are in the Process
+
+```
+┌─────────────────────────────────────────────┐
+│ 1. Architect creates spec                  │ ← Already done
+│    (James + AI makes MISSION_SPEC.md)      │
+└─────────────────────────────────────────────┘
+                    ↓
+┌─────────────────────────────────────────────┐
+│ 2. Coordinator posts mission                │ ← Already done
+│    (You claimed it!)                        │
+└─────────────────────────────────────────────┘
+                    ↓
+┌─────────────────────────────────────────────┐
+│ 3. YOU BUILD (with AI)                      │ ← YOU ARE HERE
+│    - Copy template from starter-kit         │
+│    - Read MISSION_SPEC.md                   │
+│    - Use AI with provided prompts           │
+│    - Test locally                           │
+│    - Fill HANDOFF.md                        │
+│    - Push to YOUR public GitHub repo        │
+└─────────────────────────────────────────────┘
+                    ↓
+┌─────────────────────────────────────────────┐
+│ 4. Verifier reviews your work               │ ← They do this
+│    - Tests your code                        │
+│    - Checks UDC compliance                  │
+│    - PASS / NEEDS REVISION / FAIL           │
+└─────────────────────────────────────────────┘
+                    ↓
+┌─────────────────────────────────────────────┐
+│ 5. If PASS → Production deployment          │ ← Coordinator does
+│    - Deployed to production server          │
+│    - Joins the Full Potential AI network    │
+│    - You get paid!                          │
+└─────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🎉 What Success Looks Like
+## 🏗️ YOUR BUILDING PROCESS (Step-by-Step)
 
-After completing this path, you will have:
-- ✅ A working, UDC-compliant Service
-- ✅ All tests passing
-- ✅ Docker container running your Service
-- ✅ Understanding of how Services communicate
-- ✅ A completed handoff ready for production deployment
+### Step 1: Set Up Your Workspace (5 min)
 
-**Let's build something amazing! 🚀**
+```bash
+# Clone this starter-kit (read-only reference)
+git clone https://github.com/fullpotential-ai/starter-kit.git
+
+# Copy template to YOUR new repo
+cp -r starter-kit/templates/python-fastapi ../service-16-yourname
+cd ../service-16-yourname
+
+# Initialize YOUR git repo (this is what you'll submit)
+git init
+git add .
+git commit -m "Initial commit from starter-kit template"
+
+# Create YOUR GitHub repo and push
+# (Create repo at github.com/yourusername/service-16-yourname)
+git remote add origin https://github.com/yourusername/service-16-yourname.git
+git push -u origin main
+```
+
+**Important:** 
+- ✅ You build in YOUR repo (`service-16-yourname`)
+- ✅ You submit YOUR repo URL
+- ❌ You NEVER commit to `starter-kit` (it's just a template)
 
 ---
 
-## 📚 Additional Resources
+### Step 2: Read Foundation Docs (10 min)
 
-- **Full Overview:** `STARTER_KIT_OVERVIEW.md` (detailed description of entire kit)
-- **Interactive Tutorial:** `docs/GETTING_STARTED.md` (hands-on walkthrough)
-- **Security Policy:** `SECURITY.md` (what never to commit)
+**Before coding, understand the rules:**
+
+1. **Read:** `starter-kit/docs/UDC_COMPLIANCE.md`
+   - The 5 required endpoints
+   - What they must return
+   - Why they matter
+
+2. **Read:** `starter-kit/docs/SERVICE_STANDARDS.md`
+   - Code quality expectations
+   - Naming conventions
+   - Testing requirements
+
+3. **Read:** Your `MISSION_SPEC.md` (provided by Coordinator)
+   - Your specific requirements
+   - Pre-written AI prompts
+   - Success criteria
 
 ---
 
-**Next Step:** Open `lessons/01_CORE_CONCEPTS.md` and start learning! 🎓
+### Step 3: Build Using AI (1-3 hours)
 
+**The template already has all 5 UDC endpoints working!**
+
+Your job is to **add your business logic** to the `/message` endpoint (or new endpoints).
+
+#### Using the Pre-Written Prompts
+
+Your `MISSION_SPEC.md` includes prompts like this:
+
+```markdown
+### Prompt 1: Initial Setup
+```
+Using the starter-kit Python FastAPI template, add:
+- POST /register endpoint accepting: email, github_username, discord_id
+- Email validation (reject disposable emails)
+- SQLite database for tracking registrations
+```
+```
+
+**Just copy that entire prompt into Cursor/Claude and let it generate!**
+
+#### Typical AI Session
+
+```
+You: [Paste Prompt 1 from spec]
+
+AI: [Generates code for new endpoint]
+
+You: Save to src/main.py, then:
+     pytest tests/ -v
+
+You: "Add rate limiting: 10 requests per hour per IP"
+
+AI: [Updates code with rate limiting]
+
+You: pytest tests/ -v  # Verify it works
+
+You: "Write tests for the new /register endpoint"
+
+AI: [Generates test_register.py]
+
+You: pytest tests/ -v  # All tests pass!
+```
+
+**Key principles:**
+- Start with spec prompts (don't improvise)
+- Test after every change
+- Ask AI to fix test failures
+- Keep UDC endpoints working (don't delete them!)
+
+---
+
+### Step 4: Test Locally (15 min)
+
+```bash
+# Set up virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+pytest tests/ -v --cov=src
+
+# Should see: All tests pass, >80% coverage
+
+# Run the service
+python src/main.py
+
+# Test in another terminal:
+curl http://localhost:8000/health
+curl http://localhost:8000/capabilities
+curl -X POST http://localhost:8000/message \
+  -H "Content-Type: application/json" \
+  -d '{"type":"test", "payload":{}, "trace_id":"local-test"}'
+```
+
+**Checklist before moving on:**
+- [ ] All tests pass (`pytest`)
+- [ ] >80% code coverage
+- [ ] All 5 UDC endpoints respond
+- [ ] Your custom logic works
+- [ ] No errors in logs
+
+---
+
+### Step 5: Fill Out HANDOFF.md (10 min)
+
+```bash
+# Copy the template
+cp ../starter-kit/HANDOFF_TEMPLATE.md HANDOFF.md
+
+# Use AI to help fill it out
+```
+
+**In Cursor/Claude:**
+```
+Prompt: "I've completed a service that does [describe]. 
+Review my code in src/main.py and help me fill out 
+the HANDOFF.md template. Include:
+- Implementation summary
+- Key features
+- Technologies used
+- Known limitations
+- How to test"
+```
+
+AI will generate draft content. **You must review and verify it!**
+
+---
+
+### Step 6: Security Check (5 min)
+
+**CRITICAL - Run these before submitting:**
+
+```bash
+# 1. Check for secrets
+grep -rn "password\|secret\|key\|token" src/ --include="*.py"
+# Should only find variable NAMES, not values
+
+# 2. Check .env is gitignored
+cat .gitignore | grep .env
+# Should show: .env
+
+# 3. Verify .env not in repo
+git status
+# Should NOT show .env
+
+# 4. Check credentials are in .env.example only
+cat .env.example
+# Should have placeholders like "your-secret-here"
+```
+
+**If you find a secret in code:** 
+1. Move it to `.env`
+2. Load from environment
+3. Check git history: `git log -p | grep -i "secret"`
+4. If in history, contact Coordinator immediately!
+
+---
+
+### Step 7: Submit (2 min)
+
+```bash
+# Final commit
+git add .
+git commit -m "Complete Service #16 - [Feature Name]"
+git push origin main
+```
+
+**Reply to your Coordinator with:**
+```
+Subject: Service #16 Complete - [Your Name]
+
+Repository: https://github.com/yourusername/service-16-yourname
+
+Quick test:
+git clone https://github.com/yourusername/service-16-yourname
+cd service-16-yourname
+pip install -r requirements.txt
+pytest
+python src/main.py
+
+All requirements from MISSION_SPEC.md completed.
+See HANDOFF.md for details.
+```
+
+---
+
+## 🛠️ Tools You Need
+
+**Required:**
+- Python 3.11+ - [Download](https://www.python.org/downloads/)
+- Git - [Download](https://git-scm.com/)
+- **Cursor** or **Claude** - Your AI coding assistant
+- Code editor (Cursor includes this)
+- GitHub account (free)
+
+**Optional but helpful:**
+- Docker (for local container testing)
+- Postman (for API testing)
+
+---
+
+## 📚 Reference Docs (In starter-kit)
+
+**While building, reference these:**
+
+| Doc | When to Read |
+|-----|-------------|
+| `docs/UDC_COMPLIANCE.md` | Before starting (required) |
+| `docs/SERVICE_STANDARDS.md` | While coding |
+| `docs/TECH_STACK.md` | When choosing libraries |
+| `docs/SECURITY_REQUIREMENTS.md` | Before committing |
+| `docs/SERVICE_INTEGRATION.md` | If calling other Services |
+| `docs/QUICK_REFERENCE.md` | Anytime (cheat sheet) |
+
+**Extended lessons available:**
+- `lessons/01_CORE_CONCEPTS.md` - Deep dive on Services/UDC
+- `lessons/02_SETUP_ENVIRONMENT.md` - Detailed setup
+- `lessons/03_BUILD_YOUR_SERVICE.md` - Building patterns
+- `lessons/04_TESTING.md` - Testing strategies
+- `lessons/05_DOCKER_DEPLOYMENT.md` - Docker guide
+- `lessons/06_SUBMISSION.md` - Submission details
+
+**Read these if you want deeper understanding, but not required to complete your mission.**
+
+---
+
+## ❓ Common Questions
+
+### "Do I code everything from scratch?"
+**No!** The template has all UDC endpoints working. You just add your business logic.
+
+### "Can I use AI to write all the code?"
+**Yes!** That's the point. Use the prompts in your MISSION_SPEC.md.
+
+### "What if the tests fail?"
+Ask AI: "The test test_register is failing with error [paste error]. Fix the code."
+
+### "Can I add my own endpoints?"
+**Yes!** Add any endpoints you need. Just keep the 5 UDC endpoints working.
+
+### "What if I get stuck?"
+1. Try asking AI to help debug
+2. Check the relevant doc in `starter-kit/docs/`
+3. Read the extended lesson if available
+4. Contact your Coordinator
+
+### "Do I need to understand everything?"
+**No.** Understand the 5 UDC endpoints and your specific mission. The rest you can learn over time.
+
+---
+
+## ✅ Submission Checklist
+
+Before submitting, verify:
+
+**Code Quality:**
+- [ ] All tests pass (`pytest`)
+- [ ] Coverage >80% (`pytest --cov`)
+- [ ] All 5 UDC endpoints respond correctly
+- [ ] Your business logic works as specified
+- [ ] Code has type hints and docstrings
+
+**Security:**
+- [ ] NO secrets in code (checked with grep)
+- [ ] `.env` file gitignored (checked with git status)
+- [ ] `env.example` has placeholders only
+- [ ] No secrets in git history
+
+**Documentation:**
+- [ ] `HANDOFF.md` filled out completely
+- [ ] `README.md` updated with your service details
+- [ ] Comments explain complex logic
+
+**Submission:**
+- [ ] Pushed to PUBLIC GitHub repo
+- [ ] Repo URL sent to Coordinator
+- [ ] Can be cloned and tested by anyone
+
+---
+
+## 🎉 After Submission
+
+### What Happens Next?
+
+**Verification (1-3 days):**
+- Verifier clones your repo
+- Runs tests
+- Checks UDC compliance
+- Reviews code quality
+- Decision: PASS / NEEDS REVISION / FAIL
+
+**If PASS:**
+- ✅ Deployed to production server
+- ✅ Service joins Full Potential AI network
+- ✅ You get paid ($40 or as specified)
+- ✅ Available for next mission!
+
+**If NEEDS REVISION:**
+- Verifier provides specific feedback
+- You fix issues
+- Re-submit
+- *This is normal! Learn and improve.*
+
+---
+
+## 🚀 You Got This!
+
+**Remember:**
+1. The template already works (UDC endpoints done)
+2. Use AI with the provided prompts (don't start from scratch)
+3. Test frequently (catch issues early)
+4. Submit YOUR repo (not starter-kit)
+5. Ask for help when stuck (Coordinator is there)
+
+**Your mission is achievable. Thousands of lines of boilerplate are already written. You just add the special sauce for your specific Service.**
+
+**Let's build! 🎯**
+
+---
+
+## 📞 Need Help?
+
+**Contact your Coordinator with:**
+- Clear description of issue
+- What you've tried
+- Error messages (if any)
+- Link to your repo
+
+**Response time:** Usually within 24 hours
+
+---
+
+**Next:** Copy the template and read your `MISSION_SPEC.md`! 🚀
